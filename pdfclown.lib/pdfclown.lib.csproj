@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <RootNamespace>org.pdfclown</RootNamespace>
+    <AssemblyName>PDFClown</AssemblyName>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyTitle>PDF Clown for .NET</AssemblyTitle>
+    <Company>Stefano Chizzolini</Company>
+    <Product>PDF Clown for .NET</Product>
+    <Description>PDF engine</Description>
+    <Copyright>Copyright 2006-2015 Stefano Chizzolini</Copyright>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <AssemblyVersion>0.2.0</AssemblyVersion>
+    <FileVersion>0.2.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugType>full</DebugType>
+    <OutputPath>build\package</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>build\package</OutputPath>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\fonts\AGL20.scsv">
+      <Link>res\fonts\AGL20.scsv</Link>
+      <LogicalName>fonts.AGL20</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Courier.afm">
+      <Link>res\fonts\afm\Courier.afm</Link>
+      <LogicalName>fonts.afm.Courier</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Courier-Bold.afm">
+      <Link>res\fonts\afm\Courier-Bold.afm</Link>
+      <LogicalName>fonts.afm.Courier-Bold</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Courier-BoldOblique.afm">
+      <Link>res\fonts\afm\Courier-BoldOblique.afm</Link>
+      <LogicalName>fonts.afm.Courier-BoldOblique</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Courier-Oblique.afm">
+      <Link>res\fonts\afm\Courier-Oblique.afm</Link>
+      <LogicalName>fonts.afm.Courier-Oblique</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Helvetica.afm">
+      <Link>res\fonts\afm\Helvetica.afm</Link>
+      <LogicalName>fonts.afm.Helvetica</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Helvetica-Bold.afm">
+      <Link>res\fonts\afm\Helvetica-Bold.afm</Link>
+      <LogicalName>fonts.afm.Helvetica-Bold</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Helvetica-BoldOblique.afm">
+      <Link>res\fonts\afm\Helvetica-BoldOblique.afm</Link>
+      <LogicalName>fonts.afm.Helvetica-BoldOblique</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Helvetica-Oblique.afm">
+      <Link>res\fonts\afm\Helvetica-Oblique.afm</Link>
+      <LogicalName>fonts.afm.Helvetica-Oblique</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Symbol.afm">
+      <Link>res\fonts\afm\Symbol.afm</Link>
+      <LogicalName>fonts.afm.Symbol</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Times-Bold.afm">
+      <Link>res\fonts\afm\Times-Bold.afm</Link>
+      <LogicalName>fonts.afm.Times-Bold</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Times-BoldItalic.afm">
+      <Link>res\fonts\afm\Times-BoldItalic.afm</Link>
+      <LogicalName>fonts.afm.Times-BoldItalic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Times-Italic.afm">
+      <Link>res\fonts\afm\Times-Italic.afm</Link>
+      <LogicalName>fonts.afm.Times-Italic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\Times-Roman.afm">
+      <Link>res\fonts\afm\Times-Roman.afm</Link>
+      <LogicalName>fonts.afm.Times-Roman</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\afm\ZapfDingbats.afm">
+      <Link>res\fonts\afm\ZapfDingbats.afm</Link>
+      <LogicalName>fonts.afm.ZapfDingbats</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cmap\Identity-H">
+      <Link>res\fonts\cmap\Identity-H</Link>
+      <LogicalName>fonts.cmap.Identity-H</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cmap\Identity-V">
+      <Link>res\fonts\cmap\Identity-V</Link>
+      <LogicalName>fonts.cmap.Identity-V</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cff\ExpertCharset">
+      <Link>res\fonts\cff\ExpertCharset</Link>
+      <LogicalName>fonts.cff.ExpertCharset</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cff\ExpertSubsetCharset">
+      <Link>res\fonts\cff\ExpertSubsetCharset</Link>
+      <LogicalName>fonts.cff.ExpertSubsetCharset</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cff\ISOAdobeCharset">
+      <Link>res\fonts\cff\ISOAdobeCharset</Link>
+      <LogicalName>fonts.cff.ISOAdobeCharset</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\fonts\cff\StandardStrings">
+      <Link>res\fonts\cff\StandardStrings</Link>
+      <LogicalName>fonts.cff.StandardStrings</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.CoreFX.Forms\src\System.CoreFX.Forms.csproj" />
+  </ItemGroup>
+  <Import Project="..\System.CoreFX.Forms\System.CoreFX.Forms.Implementation\System.CoreFX.Forms.Implementation.projitems" Label="Shared" />
+</Project>
